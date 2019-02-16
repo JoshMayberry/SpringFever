@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="false"
+        android:scaleType="centerCrop"
+        android:tint="@color/colorDarkImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/about" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="116dp"
+        android:background="@color/colorThemeOne"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:tint="@color/colorThemeOneDark"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:srcCompat="@drawable/simple_facebook" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:tint="@color/colorThemeOneDark"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toTopOf="@+id/imageButton2"
+        app:srcCompat="@drawable/simple_maps" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:tint="@color/colorThemeOneDark"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toTopOf="@+id/imageButton3"
+        app:srcCompat="@drawable/simple_telegram" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:tint="@color/colorThemeOneDark"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintTop_toTopOf="@+id/imageButton4"
+        app:srcCompat="@drawable/simple_whatsapp" />
+</android.support.constraint.ConstraintLayout>

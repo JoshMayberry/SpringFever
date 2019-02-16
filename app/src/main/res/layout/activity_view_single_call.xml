@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ConstraintLayout; See: https://www.youtube.com/watch?v=z53Ed0ddxgM --><!-- ConstraintLayout; See: https://www.youtube.com/watch?v=rzmB3UxxhaA -->
+    <data>
+
+        <variable
+            name="birdCall"
+            type="com.example.android.springfever.BirdCall" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ViewSingleCallActivity">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <android.support.constraint.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="viewSingle_labelMaterialBase,viewSingle_labelDescription,viewSingle_labelMaterialCover,viewSingle_labelName,viewSingle_labelProductId,viewSingle_labelMaterialSoundboard,viewSingle_labelMaterialStriker"
+            tools:layout_editor_absoluteX="411dp" />
+
+        <ImageView
+            android:id="@+id/viewSingle_productImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/contDesc_productImage"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/empty" />
+
+        <TextView
+            android:id="@+id/viewSingle_valuePrice"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{birdCall.price}"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/viewSingle_valueMaterialBase"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline"
+            tools:text="$5.00" />
+
+        <TextView
+            android:id="@+id/viewSingle_labelName"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/label_name"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="264dp" />
+
+        <TextView
+            android:id="@+id/viewSingle_valueName"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@{birdCall.name}"
+            app:layout_constraintEnd_toStartOf="@+id/viewSingle_valuePrice"
+            app:layout_constraintStart_toEndOf="@+id/barrier2"
+            app:layout_constraintTop_toTopOf="@+id/viewSingle_labelName"
+            tools:text="Copper Call 5" />
+
+        <TextView
+            android:id="@+id/viewSingle_labelProductId"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/label_product_id"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewSingle_labelName" />
+
+        <TextView
+            android:id="@+id/viewSingle_valueProductId"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="287dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@{birdCall.productId}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier2"
+            app:layout_constraintTop_toTopOf="@+id/viewSingle_labelProductId"
+            tools:text="B1C1S1" />
+
+        <TextView
+            android:id="@+id/viewSingle_labelMaterialBase"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/label_material_base"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewSingle_labelProductId" />
+
+        <TextView
+            android:id="@+id/viewSingle_valueMaterialBase"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@{birdCall.materialBase}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier2"
+            app:layout_constraintTop_toTopOf="@+id/viewSingle_labelMaterialBase"
+            tools:text="Maple" />
+
+        <TextView
+            android:id="@+id/viewSingle_labelMaterialSoundboard"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/label_material_soundboard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewSingle_labelMaterialBase" />
+
+        <TextView
+            android:id="@+id/viewSingle_valueMaterialSoundboard"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@{birdCall.materialSoundboard}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier2"
+            app:layout_constraintTop_toTopOf="@+id/viewSingle_labelMaterialSoundboard"
+            tools:text="Steel" />
+
+        <TextView
+            android:id="@+id/viewSingle_labelMaterialCover"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/label_material_cover"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewSingle_labelMaterialSoundboard" />
+
+        <TextView
+            android:id="@+id/viewSingle_valueMaterialCover"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@{birdCall.materialCover}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier2"
+            app:layout_constraintTop_toTopOf="@+id/viewSingle_labelMaterialCover"
+            tools:text="Glass" />
+
+        <TextView
+            android:id="@+id/viewSingle_labelMaterialStriker"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/label_material_striker"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewSingle_labelMaterialCover" />
+
+        <TextView
+            android:id="@+id/viewSingle_valueMaterialStriker"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@{birdCall.materialStriker}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/barrier2"
+            app:layout_constraintTop_toTopOf="@+id/viewSingle_labelMaterialStriker"
+            tools:text="Maple" />
+
+        <TextView
+            android:id="@+id/viewSingle_labelDescription"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/label_description"
+            app:layout_constraintEnd_toEndOf="@+id/barrier2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewSingle_labelMaterialStriker" />
+
+        <TextView
+            android:id="@+id/viewSingle_valueDescription"
+            style="@style/TextAppearance.AppCompat.Medium"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:scrollbars="vertical"
+            android:text="@{birdCall.description}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier2"
+            app:layout_constraintTop_toTopOf="@+id/viewSingle_labelDescription"
+            tools:text="@string/lorem_ipsum" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

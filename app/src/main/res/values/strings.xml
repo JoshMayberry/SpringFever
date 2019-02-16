@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">Spring Fever</string>
+    <string name="error">N/A</string>
+    <string name="company_name">Spring Fever Custom Calls</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+    <!-- Activity Names -->
+    <string name="title_gallery">Gallery</string>
+    <string name="title_shopping">Shopping</string>
+    <string name="title_about">About</string>
+    <string name="title_view_calls">Catalogue</string>
+
+    <!-- Content Descriptions -->
+    <string name="contDes_playSound">Play Sound</string>
+    <string name="contDesc_titleImage">Title Image</string>
+    <string name="contDesc_productImage">Product Image</string>
+
+    <!-- Bird Call Attributes -->
+    <string name="label_name">Name</string>
+    <string name="label_product_id">Product Id</string>
+    <string name="label_description">Description</string>
+    <string name="label_material_base">Base</string>
+    <string name="label_material_cover">Cover</string>
+    <string name="label_material_striker">Striker</string>
+    <string name="label_material_soundboard">Soundboard</string>
+
+    <!-- Bird Call Attribute: Name -->
+    <!-- Temporary text taken from G2000 on https://gamefaqs.gamespot.com/ps2/459841-final-fantasy-xii/faqs/42270 -->
+    <string name="material_name_1">Earth Stone</string>
+    <string name="material_name_2">Wind Magicite</string>
+    <string name="material_name_3">Water Crystal</string>
+    <string name="material_name_4">Arcana</string>
+    <string name="material_name_5">Turtle Shell</string>
+    <string name="material_name_6">Wyrm Carapace</string>
+    <string name="material_name_7">Destrier Barding</string>
+    <string name="material_name_8">Fish Scale</string>
+    <string name="material_name_9">Drab Wool</string>
+    <string name="material_name_10">Rat Pelt</string>
+    <string name="material_name_11">Tanned Hide</string>
+    <string name="material_name_12">Small Feather</string>
+    <string name="material_name_13">Horn</string>
+    <string name="material_name_14">Wyvern Fang</string>
+    <string name="material_name_15">Cactus Fruit</string>
+    <string name="material_name_16">Malboro Vine</string>
+    <string name="material_name_17">Quality Lumber</string>
+    <string name="material_name_18">Iron Ore</string>
+    <string name="material_name_19">Green Liquid</string>
+    <string name="material_name_20">Sky Jewel</string>
+    <string name="material_name_21">Demon Eyeball</string>
+    <string name="material_name_22">Feystone</string>
+    <string name="material_name_23">Broken Sword</string>
+    <string name="material_name_24">Moon Ring</string>
+    <string name="material_name_25">Rat Tail</string>
+    <string name="material_name_26">Mythril</string>
+    <string name="material_name_27">Adamantite</string>
+
+    <!-- Bird Call Attribute: Description -->
+    <!-- Temporary text taken from G2000 on https://gamefaqs.gamespot.com/ps2/459841-final-fantasy-xii/faqs/42270 -->
+    <string name="material_description_1">A stone infused with the power of earth. It looks like an ordinary stone, but is surprisingly heavy.</string>
+    <string name="material_description_2">A stone infused with wind magicks. Travelers carry these charms to ensure safe passage with the wind at their backs.</string>
+    <string name="material_description_3">A crystallization of potent water magicks, said to contain the divine power of regeneration. The source of an undin entite\'s energy.</string>
+    <string name="material_description_4">A jewel containing a creature\'s soul. Only when its soul is released will the creature find true peace.</string>
+    <string name="material_description_5">A tough shell. These are often used to craft crockery, armor, and other items of daily convenience.</string>
+    <string name="material_description_6">A thick dragon-hide, like a sheath of iron. Countless are the blades that failed to pass its test and now lie sundered beneath the bleached bones of their owners.</string>
+    <string name="material_description_7">A set of equestrian armor meant only to be worn by a knight\'s steed. Valued more for its style than its substance.</string>
+    <string name="material_description_8">The oily surface of this scale gives off a peculiar sheen. Both the scale and its oil are known to find buyers at market.</string>
+    <string name="material_description_9">Unattractive, inexpensive wool, suitable only for stitching in places not like to be seen, lest it cheapen the garment\'s appearance.</string>
+    <string name="material_description_10">An easily torn, yet very pliable small pelt. These are suited to a variety of uses, but fetch a low price due to their ready availability.</string>
+    <string name="material_description_11">A basic material in the fashioning of leather goods. The tanning process makes these hides softer and far more useful than raw hides.</string>
+    <string name="material_description_12">A feather small enough to fit in one\'s palm. The perfect accent to a hat, accessory, or other garment.</string>
+    <string name="material_description_13">A spiral horn. While the material of the horn is hard, its hollowness makes it prone to shattering. As such, these horns have lost favor among artificers of late.</string>
+    <string name="material_description_14">A cruel fang, worthy of the mighty may within which it once stood. These evolved not only to deliver crushing bites, but also to withstand the wyvern\'s deadly breath.</string>
+    <string name="material_description_15">These dense desert fruits are slightly sweet and surprisingly juicy. Valued as a treat for children.</string>
+    <string name="material_description_16">A thin, highly elastic vine. Easily cut, these are excellent for various crafts. Bundles of such vines are a common sight at market.</string>
+    <string name="material_description_17">Long years in the primordial forests have infused the fibers of this lumber with Mist. Perfect for use in the crafting of fine furnishings and magick staves.</string>
+    <string name="material_description_18">A chunk of iron-rich ore. The iron is extracted and purified, though some lands forbid its use in the making of arms and ammunition for warfare.</string>
+    <string name="material_description_19">A thick, virescent, sludgy goop that exudes a truly bile odor.</string>
+    <string name="material_description_20">A translucent bead, thought to be the product of heavenly power. When a soul reaches heaven, it is said that the body left behind is transformed into one of these jewels.</string>
+    <string name="material_description_21">A foul, fiendish being\'s eyeball, reeking of dark magicks. It seems to be watching, searching you for a weakness born of some small misdeed.</string>
+    <string name="material_description_22">This chunk of stone, filled with the power of nature, gives off a wan light. These stones lend form to elementals and entites.</string>
+    <string name="material_description_23">A sword with a jagged break halfway down the blade. One can only imagine what grisly fate its former owner must have met.</string>
+    <string name="material_description_24">A large metal disc, out of which the shape of a full moon has been carved. Rumored to be a device for the entrapment of spirits, or perhaps a protective charm.</string>
+    <string name="material_description_25">A common alchemical ingredient. Rumored to be quite tasty when properly prepared.</string>
+    <string name="material_description_26">This type of silver is laced with strong magicks, making it resistant to fire and the ill will of foes. A common material in quality arms and armor.</string>
+    <string name="material_description_27">The strongest material known to exist in nature. Mantion of this metal in the oldest records of Ivalice attests to its long-established uses.</string>
+
+    <!-- Bird Call Attribute: Base -->
+    <string name="material_base_1">Maple</string>
+    <string name="material_base_2">Birch</string>
+    <string name="material_base_3">Mahogany</string>
+
+    <!-- Bird Call Attribute: Cover -->
+    <string name="material_cover_1">Maple</string>
+    <string name="material_cover_2">Birch</string>
+    <string name="material_cover_3">Mahogany</string>
+    <string name="material_cover_4">Glass</string>
+
+    <!-- Bird Call Attribute: Striker -->
+    <string name="material_striker_1">Maple</string>
+    <string name="material_striker_2">Birch</string>
+    <string name="material_striker_3">Mahogany</string>
+
+    <!-- Bird Call Attribute: Soundboard -->
+    <string name="material_soundboard_1">Maple</string>
+    <string name="material_soundboard_2">Birch</string>
+    <string name="material_soundboard_3">Mahogany</string>
+
+</resources>
