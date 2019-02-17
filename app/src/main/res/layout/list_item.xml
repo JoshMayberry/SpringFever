@@ -1,56 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- ConstraintLayout; See: https://www.youtube.com/watch?v=z53Ed0ddxgM -->
-<!-- ConstraintLayout; See: https://www.youtube.com/watch?v=rzmB3UxxhaA -->
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/padding_default">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/list_item_top"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        style="@style/TextAppearance.AppCompat.Small"
-        app:layout_constraintEnd_toEndOf="@+id/barrier"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Copper Call" />
+    <data>
 
-    <TextView
-        android:id="@+id/list_item_bottom"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding_default"
-        android:layout_marginEnd="@dimen/padding_default"
-        style="@style/TextAppearance.AppCompat.Caption"
-        app:layout_constraintEnd_toEndOf="@+id/barrier"
-        app:layout_constraintStart_toStartOf="@+id/list_item_top"
-        app:layout_constraintTop_toBottomOf="@+id/list_item_top"
-        tools:text="Glass covered, maple striker" />
+        <variable
+            name="birdCall"
+            type="com.example.android.springfever.BirdCall" />
+    </data>
 
-    <ImageView
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="@string/contDes_playSound"
-        android:src="@drawable/baseline_play_circle_filled_black_36"
-        app:layout_constraintBottom_toBottomOf="@+id/list_item_bottom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/list_item_top" />
+    <!-- ConstraintLayout; See: https://www.youtube.com/watch?v=z53Ed0ddxgM -->
+    <!-- ConstraintLayout; See: https://www.youtube.com/watch?v=rzmB3UxxhaA -->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorThemeOneLight"
+        android:descendantFocusability="blocksDescendants"
+        android:padding="@dimen/padding_default">
 
-    <android.support.constraint.Barrier
-        android:id="@+id/barrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="left"
-        app:constraint_referenced_ids="imageButton"
-        tools:layout_editor_absoluteX="395dp"
-        tools:layout_editor_absoluteY="16dp" />
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/list_item_top"
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@{birdCall.name}"
+            app:layout_constraintEnd_toEndOf="@+id/barrier"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Copper Call" />
+
+        <TextView
+            android:id="@+id/list_item_bottom"
+            style="@style/TextAppearance.AppCompat.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_default"
+            android:layout_marginEnd="@dimen/padding_default"
+            android:text="@{birdCall.shortDescription}"
+            app:layout_constraintEnd_toEndOf="@+id/barrier"
+            app:layout_constraintStart_toStartOf="@+id/list_item_top"
+            app:layout_constraintTop_toBottomOf="@+id/list_item_top"
+            tools:text="Glass covered, maple striker" />
+
+        <!-- See: https://codelabs.developers.google.com/codelabs/android-databinding/index.html?index=..%2F..index#5 -->
+        <!-- See: https://cyrilmottier.com/2011/11/23/listview-tips-tricks-4-add-several-clickable-areas/ -->
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/contDes_playSound"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:onClick="@{() -> birdCall.onPlaySound()}"
+            android:src="@drawable/baseline_play_circle_filled_black_36"
+            android:tint="@color/colorThemeOneDark"
+            app:layout_constraintBottom_toBottomOf="@+id/list_item_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/list_item_top" />
+
+        <android.support.constraint.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="left"
+            app:constraint_referenced_ids="imageButton"
+            tools:layout_editor_absoluteX="395dp"
+            tools:layout_editor_absoluteY="16dp" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

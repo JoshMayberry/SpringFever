@@ -25,7 +25,7 @@
             android:theme="@style/Theme.AppCompat.SpringFever.ThemeThree" />
         <activity
             android:name=".ViewSingleCallActivity"
-            android:label="@string/error"
+            android:label="@string/title_view_single_call"
             android:theme="@style/Theme.AppCompat.SpringFever.ThemeOne" />
         <activity
             android:name=".ViewCallsActivity"

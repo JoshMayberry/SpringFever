@@ -13,6 +13,7 @@ public class BirdCallParcel implements Parcelable {
 
     int name = R.string.error;
     int price = R.string.error;
+    int sound = R.raw.error;
     int productId = R.string.error;
     int description = R.string.error;
 
@@ -27,6 +28,7 @@ public class BirdCallParcel implements Parcelable {
     BirdCallParcel(BirdCall birdCall) {
         name = birdCall.getNameInt();
         price = birdCall.getPriceInt();
+        sound = birdCall.getSoundInt();
         productId = birdCall.getProductIdInt();
         description = birdCall.getDescriptionInt();
 
@@ -41,6 +43,7 @@ public class BirdCallParcel implements Parcelable {
     public void writeToParcel(Parcel out, int flags) {
         out.writeInt(this.name);
         out.writeInt(this.price);
+        out.writeInt(this.sound);
         out.writeInt(this.productId);
         out.writeInt(this.description);
         out.writeInt(this.materialBase);
@@ -52,6 +55,7 @@ public class BirdCallParcel implements Parcelable {
     private BirdCallParcel(Parcel in) {
         this.name = in.readInt();
         this.price = in.readInt();
+        this.sound = in.readInt();
         this.productId = in.readInt();
         this.description = in.readInt();
         this.materialBase = in.readInt();

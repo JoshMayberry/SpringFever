@@ -12,36 +12,62 @@ import android.databinding.Bindable;
  */
 public class BirdCall extends BaseObservable {
     private Activity mActivity;
+    private MyMediaPlayer mMyMediaPlayer;
 
     private int mName = R.string.error;
     private int mPrice = R.string.error;
     private int mProductId = R.string.error;
     private int mDescription = R.string.error;
+    private int mSoundId = R.raw.error;
 
     private int mMaterialBase = R.string.error;
     private int mMaterialCover = R.string.error;
     private int mMaterialStriker = R.string.error;
     private int mMaterialSoundboard = R.string.error;
 
-    BirdCall(Activity activity) {
+    BirdCall(ViewCallsActivity activity) {
         this.mActivity = activity;
+        mMyMediaPlayer = activity.myMediaPlayer; //I can't figure out how to access this in both activities using mActivity, so this is what I came up with
+        extractParcelData();
+    }
 
-        Intent intent = activity.getIntent();
-        if (intent.hasExtra("bird_call")) {
-            BirdCallParcel parcel = intent.getParcelableExtra("bird_call");
-            extractParcelData(parcel);
-        }
+    BirdCall(ViewSingleCallActivity activity) {
+        this.mActivity = activity;
+        mMyMediaPlayer = activity.myMediaPlayer; //I can't figure out how to access this in both activities using mActivity, so this is what I came up with
+        extractParcelData();
+    }
+
+    @Override
+    public String toString() {
+        return "BirdCall{" +
+                "mActivity=" + mActivity +
+                ", mMyMediaPlayer is not null=" + String.valueOf(mMyMediaPlayer != null) +
+                ", mName=" + mName +
+                ", mPrice=" + mPrice +
+                ", mProductId=" + mProductId +
+                ", mDescription=" + mDescription +
+                ", mSoundId=" + mSoundId +
+                ", mMaterialBase=" + mMaterialBase +
+                ", mMaterialCover=" + mMaterialCover +
+                ", mMaterialStriker=" + mMaterialStriker +
+                ", mMaterialSoundboard=" + mMaterialSoundboard +
+                '}';
     }
 
     /**
      * This extracts the parcel values and places them into a more stable object
      * See: https://guides.codepath.com/android/using-parcelable#what-it-is-not
-     *
-     * @param parcel - The BirdCallParcel object to use
      */
-    private void extractParcelData(BirdCallParcel parcel) {
+    private void extractParcelData() {
+        Intent intent = mActivity.getIntent();
+        if (!(intent.hasExtra("bird_call"))) {
+            return;
+        }
+
+        BirdCallParcel parcel = intent.getParcelableExtra("bird_call");
         setName(parcel.name);
         setPrice(parcel.price);
+        setSound(parcel.sound);
         setProductId(parcel.productId);
         setDescription(parcel.description);
 
@@ -96,6 +122,13 @@ public class BirdCall extends BaseObservable {
         this.mProductId = productId;
         notifyPropertyChanged(BR.productId);
         return this;
+    }
+
+    //See: https://stackoverflow.com/questions/1583940/how-do-i-get-the-first-n-characters-of-a-string-without-checking-the-size-or-goi/1583968#1583968
+    @Bindable
+    public String getShortDescription() {
+        String description = mActivity.getString(mDescription);
+        return description.substring(0, Math.min(description.length(), 20)) + "...";
     }
 
     @Bindable
@@ -163,6 +196,15 @@ public class BirdCall extends BaseObservable {
         return mActivity.getString(mMaterialSoundboard);
     }
 
+    public int getSoundInt() {
+        return mSoundId;
+    }
+
+    public BirdCall setSound(int soundId) {
+        this.mSoundId = soundId;
+        return this;
+    }
+
     public int getMaterialSoundboardInt() {
         return mMaterialSoundboard;
     }
@@ -171,5 +213,9 @@ public class BirdCall extends BaseObservable {
         this.mMaterialSoundboard = materialSoundboard;
         notifyPropertyChanged(BR.materialSoundboard);
         return this;
+    }
+
+    public void onPlaySound() {
+        mMyMediaPlayer.playSound(mSoundId);
     }
 }
