@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
+import android.graphics.drawable.Drawable;
+import android.util.Log;
+import android.widget.ImageView;
 
 /**
  * This class holds data pertaining to a bird call.
@@ -19,6 +22,11 @@ public class BirdCall extends BaseObservable {
     private int mProductId = R.string.error;
     private int mDescription = R.string.error;
     private int mSoundId = R.raw.error;
+
+    private int mImage = R.drawable.empty;
+    private int mImageScaleType = SCALE_TYPE_CENTER_CROP;
+    public static final int SCALE_TYPE_CENTER_CROP = 0;
+    public static final int SCALE_TYPE_CENTER_INSIDE = 1;
 
     private int mMaterialBase = R.string.error;
     private int mMaterialCover = R.string.error;
@@ -71,12 +79,19 @@ public class BirdCall extends BaseObservable {
         setProductId(parcel.productId);
         setDescription(parcel.description);
 
+        setImage(parcel.image, parcel.imageScaleType);
+
         setMaterialBase(parcel.materialBase);
         setMaterialCover(parcel.materialCover);
         setMaterialStriker(parcel.materialStriker);
         setMaterialSoundboard(parcel.materialSoundboard);
     }
 
+    public void onPlaySound() {
+        mMyMediaPlayer.playSound(mSoundId);
+    }
+
+    //Getters
     //See: https://codelabs.developers.google.com/codelabs/android-databinding/index.html?index=..%2F..index#6
     //See: https://www.youtube.com/watch?v=gP_zj-CIBvM
     @Bindable
@@ -88,12 +103,6 @@ public class BirdCall extends BaseObservable {
         return mName;
     }
 
-    public BirdCall setName(int name) {
-        this.mName = name;
-        notifyPropertyChanged(BR.name);
-        return this;
-    }
-
     @Bindable
     public String getPrice() {
         return "$" + mPrice + ".00";
@@ -101,12 +110,6 @@ public class BirdCall extends BaseObservable {
 
     public int getPriceInt() {
         return mPrice;
-    }
-
-    public BirdCall setPrice(int price) {
-        this.mPrice = price;
-        notifyPropertyChanged(BR.price);
-        return this;
     }
 
     @Bindable
@@ -118,10 +121,30 @@ public class BirdCall extends BaseObservable {
         return mProductId;
     }
 
-    public BirdCall setProductId(int productId) {
-        this.mProductId = productId;
-        notifyPropertyChanged(BR.productId);
-        return this;
+    @Bindable
+    public Drawable getImage() {
+        return mActivity.getDrawable(mImage);
+    }
+
+    @Bindable
+    public ImageView.ScaleType getImageScaleType() {
+        switch (mImageScaleType) {
+            case SCALE_TYPE_CENTER_CROP:
+                return ImageView.ScaleType.CENTER_CROP;
+            case SCALE_TYPE_CENTER_INSIDE:
+                return ImageView.ScaleType.CENTER_INSIDE;
+            default:
+                Log.e("BirdCall", "Unknown scale type " + mImageScaleType);
+                return ImageView.ScaleType.CENTER_CROP;
+        }
+    }
+
+    public int getImageScaleTypeInt() {
+        return mImageScaleType;
+    }
+
+    public int getImageInt() {
+        return mImage;
     }
 
     //See: https://stackoverflow.com/questions/1583940/how-do-i-get-the-first-n-characters-of-a-string-without-checking-the-size-or-goi/1583968#1583968
@@ -140,12 +163,6 @@ public class BirdCall extends BaseObservable {
         return mDescription;
     }
 
-    public BirdCall setDescription(int description) {
-        this.mDescription = description;
-        notifyPropertyChanged(BR.description);
-        return this;
-    }
-
     @Bindable
     public String getMaterialBase() {
         return mActivity.getString(mMaterialBase);
@@ -153,12 +170,6 @@ public class BirdCall extends BaseObservable {
 
     public int getMaterialBaseInt() {
         return mMaterialBase;
-    }
-
-    public BirdCall setMaterialBase(int materialBase) {
-        this.mMaterialBase = materialBase;
-        notifyPropertyChanged(BR.materialBase);
-        return this;
     }
 
     @Bindable
@@ -170,12 +181,6 @@ public class BirdCall extends BaseObservable {
         return mMaterialCover;
     }
 
-    public BirdCall setMaterialCover(int materialCover) {
-        this.mMaterialCover = materialCover;
-        notifyPropertyChanged(BR.materialCover);
-        return this;
-    }
-
     @Bindable
     public String getMaterialStriker() {
         return mActivity.getString(mMaterialStriker);
@@ -183,12 +188,6 @@ public class BirdCall extends BaseObservable {
 
     public int getMaterialStrikerInt() {
         return mMaterialStriker;
-    }
-
-    public BirdCall setMaterialStriker(int materialStriker) {
-        this.mMaterialStriker = materialStriker;
-        notifyPropertyChanged(BR.materialStriker);
-        return this;
     }
 
     @Bindable
@@ -200,22 +199,79 @@ public class BirdCall extends BaseObservable {
         return mSoundId;
     }
 
-    public BirdCall setSound(int soundId) {
-        this.mSoundId = soundId;
+    public int getMaterialSoundboardInt() {
+        return mMaterialSoundboard;
+    }
+
+    //Setters
+    public BirdCall setName(int name) {
+        this.mName = name;
+        notifyPropertyChanged(BR.name);
         return this;
     }
 
-    public int getMaterialSoundboardInt() {
-        return mMaterialSoundboard;
+    public BirdCall setPrice(int price) {
+        this.mPrice = price;
+        notifyPropertyChanged(BR.price);
+        return this;
+    }
+
+    public BirdCall setProductId(int productId) {
+        this.mProductId = productId;
+        notifyPropertyChanged(BR.productId);
+        return this;
+    }
+
+    public BirdCall setImage(int imageId) {
+        this.mImage = imageId;
+        notifyPropertyChanged(BR.image);
+        return this;
+    }
+
+    public BirdCall setImage(int imageId, int scaleType) {
+        setImage(imageId);
+        setImageScaleType(scaleType);
+        return this;
+    }
+
+    public BirdCall setImageScaleType(int scaleType) {
+        this.mImageScaleType = scaleType;
+        notifyPropertyChanged(BR.imageScaleType);
+        return this;
+    }
+
+    public BirdCall setDescription(int description) {
+        this.mDescription = description;
+        notifyPropertyChanged(BR.description);
+        return this;
+    }
+
+    public BirdCall setMaterialBase(int materialBase) {
+        this.mMaterialBase = materialBase;
+        notifyPropertyChanged(BR.materialBase);
+        return this;
+    }
+
+    public BirdCall setMaterialCover(int materialCover) {
+        this.mMaterialCover = materialCover;
+        notifyPropertyChanged(BR.materialCover);
+        return this;
+    }
+
+    public BirdCall setMaterialStriker(int materialStriker) {
+        this.mMaterialStriker = materialStriker;
+        notifyPropertyChanged(BR.materialStriker);
+        return this;
+    }
+
+    public BirdCall setSound(int soundId) {
+        this.mSoundId = soundId;
+        return this;
     }
 
     public BirdCall setMaterialSoundboard(int materialSoundboard) {
         this.mMaterialSoundboard = materialSoundboard;
         notifyPropertyChanged(BR.materialSoundboard);
         return this;
-    }
-
-    public void onPlaySound() {
-        mMyMediaPlayer.playSound(mSoundId);
     }
 }

@@ -62,11 +62,14 @@
             app:layout_constraintStart_toEndOf="@+id/leftBackground"
             app:layout_constraintTop_toTopOf="@+id/guideline" />
 
+        <!-- See: https://stackoverflow.com/questions/35809290/set-drawable-resource-id-in-androidsrc-for-imageview-using-data-binding-in-andr/47312208#47312208 -->
         <ImageView
             android:id="@+id/viewSingle_productImage"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:contentDescription="@string/contDesc_productImage"
+            android:src="@{birdCall.image}"
+            android:scaleType="@{birdCall.imageScaleType}"
             app:layout_constraintBottom_toTopOf="@+id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

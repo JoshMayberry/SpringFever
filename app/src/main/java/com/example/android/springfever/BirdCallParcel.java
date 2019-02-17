@@ -17,6 +17,9 @@ public class BirdCallParcel implements Parcelable {
     int productId = R.string.error;
     int description = R.string.error;
 
+    int image = R.drawable.empty;
+    int imageScaleType = BirdCall.SCALE_TYPE_CENTER_CROP;
+
     int materialBase = R.string.error;
     int materialCover = R.string.error;
     int materialStriker = R.string.error;
@@ -32,6 +35,9 @@ public class BirdCallParcel implements Parcelable {
         productId = birdCall.getProductIdInt();
         description = birdCall.getDescriptionInt();
 
+        image = birdCall.getImageInt();
+        imageScaleType = birdCall.getImageScaleTypeInt();
+
         materialBase = birdCall.getMaterialBaseInt();
         materialCover = birdCall.getMaterialCoverInt();
         materialStriker = birdCall.getMaterialStrikerInt();
@@ -46,6 +52,10 @@ public class BirdCallParcel implements Parcelable {
         out.writeInt(this.sound);
         out.writeInt(this.productId);
         out.writeInt(this.description);
+
+        out.writeInt(this.image);
+        out.writeInt(this.imageScaleType);
+
         out.writeInt(this.materialBase);
         out.writeInt(this.materialCover);
         out.writeInt(this.materialStriker);
@@ -58,6 +68,10 @@ public class BirdCallParcel implements Parcelable {
         this.sound = in.readInt();
         this.productId = in.readInt();
         this.description = in.readInt();
+
+        this.image = in.readInt();
+        this.imageScaleType = in.readInt();
+
         this.materialBase = in.readInt();
         this.materialCover = in.readInt();
         this.materialStriker = in.readInt();

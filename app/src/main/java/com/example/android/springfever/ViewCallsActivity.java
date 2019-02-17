@@ -57,7 +57,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_1));
+                .setSound(R.raw.placeholder_1)
+                .setImage(R.drawable.placeholder_1, BirdCall.SCALE_TYPE_CENTER_CROP));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_2)
                 .setDescription(R.string.material_description_2)
@@ -67,7 +68,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_2)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_2));
+                .setSound(R.raw.placeholder_2)
+                .setImage(R.drawable.placeholder_2, BirdCall.SCALE_TYPE_CENTER_CROP));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_3)
                 .setDescription(R.string.material_description_3)
@@ -77,7 +79,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_3)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_3));
+                .setSound(R.raw.placeholder_3)
+                .setImage(R.drawable.placeholder_3, BirdCall.SCALE_TYPE_CENTER_CROP));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_4)
                 .setDescription(R.string.material_description_4)
@@ -87,7 +90,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_4)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_4));
+                .setSound(R.raw.placeholder_4)
+                .setImage(R.drawable.placeholder_4, BirdCall.SCALE_TYPE_CENTER_INSIDE));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_5)
                 .setDescription(R.string.material_description_5)
@@ -97,7 +101,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_2)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_5));
+                .setSound(R.raw.placeholder_5)
+                .setImage(R.drawable.placeholder_5, BirdCall.SCALE_TYPE_CENTER_INSIDE));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_6)
                 .setDescription(R.string.material_description_6)
@@ -107,7 +112,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_1));
+                .setSound(R.raw.placeholder_1)
+                .setImage(R.drawable.placeholder_6, BirdCall.SCALE_TYPE_CENTER_INSIDE));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_7)
                 .setDescription(R.string.material_description_7)
@@ -117,7 +123,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_2));
+                .setSound(R.raw.placeholder_2)
+                .setImage(R.drawable.placeholder_1, BirdCall.SCALE_TYPE_CENTER_CROP));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_8)
                 .setDescription(R.string.material_description_8)
@@ -127,7 +134,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_3));
+                .setSound(R.raw.placeholder_3)
+                .setImage(R.drawable.placeholder_2, BirdCall.SCALE_TYPE_CENTER_CROP));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_9)
                 .setDescription(R.string.material_description_9)
@@ -137,7 +145,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_4));
+                .setSound(R.raw.placeholder_4)
+                .setImage(R.drawable.placeholder_3, BirdCall.SCALE_TYPE_CENTER_CROP));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_10)
                 .setDescription(R.string.material_description_10)
@@ -147,7 +156,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_5));
+                .setSound(R.raw.placeholder_5)
+                .setImage(R.drawable.placeholder_4, BirdCall.SCALE_TYPE_CENTER_INSIDE));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_11)
                 .setDescription(R.string.material_description_11)
@@ -157,7 +167,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_1));
+                .setSound(R.raw.placeholder_1)
+                .setImage(R.drawable.placeholder_5, BirdCall.SCALE_TYPE_CENTER_INSIDE));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_12)
                 .setDescription(R.string.material_description_12)
@@ -167,7 +178,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_2));
+                .setSound(R.raw.placeholder_2)
+                .setImage(R.drawable.placeholder_6, BirdCall.SCALE_TYPE_CENTER_INSIDE));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_13)
                 .setDescription(R.string.material_description_13)
@@ -177,7 +189,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_3));
+                .setSound(R.raw.placeholder_3)
+                .setImage(R.drawable.placeholder_1, BirdCall.SCALE_TYPE_CENTER_CROP));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_14)
                 .setDescription(R.string.material_description_14)
@@ -187,7 +200,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_4));
+                .setSound(R.raw.placeholder_4)
+                .setImage(R.drawable.placeholder_2, BirdCall.SCALE_TYPE_CENTER_CROP));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_15)
                 .setDescription(R.string.material_description_15)
@@ -197,7 +211,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_5));
+                .setSound(R.raw.placeholder_5)
+                .setImage(R.drawable.placeholder_3, BirdCall.SCALE_TYPE_CENTER_CROP));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_16)
                 .setDescription(R.string.material_description_16)
@@ -207,7 +222,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_1));
+                .setSound(R.raw.placeholder_1)
+                .setImage(R.drawable.placeholder_4, BirdCall.SCALE_TYPE_CENTER_INSIDE));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_17)
                 .setDescription(R.string.material_description_17)
@@ -217,7 +233,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_2));
+                .setSound(R.raw.placeholder_2)
+                .setImage(R.drawable.placeholder_5, BirdCall.SCALE_TYPE_CENTER_INSIDE));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_18)
                 .setDescription(R.string.material_description_18)
@@ -227,7 +244,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_3));
+                .setSound(R.raw.placeholder_3)
+                .setImage(R.drawable.placeholder_6, BirdCall.SCALE_TYPE_CENTER_INSIDE));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_19)
                 .setDescription(R.string.material_description_19)
@@ -237,7 +255,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_4));
+                .setSound(R.raw.placeholder_4)
+                .setImage(R.drawable.placeholder_1, BirdCall.SCALE_TYPE_CENTER_CROP));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_20)
                 .setDescription(R.string.material_description_20)
@@ -247,7 +266,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_5));
+                .setSound(R.raw.placeholder_5)
+                .setImage(R.drawable.placeholder_2, BirdCall.SCALE_TYPE_CENTER_CROP));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_21)
                 .setDescription(R.string.material_description_21)
@@ -257,7 +277,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_1));
+                .setSound(R.raw.placeholder_1)
+                .setImage(R.drawable.placeholder_3, BirdCall.SCALE_TYPE_CENTER_CROP));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_22)
                 .setDescription(R.string.material_description_22)
@@ -267,7 +288,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_2));
+                .setSound(R.raw.placeholder_2)
+                .setImage(R.drawable.placeholder_4, BirdCall.SCALE_TYPE_CENTER_INSIDE));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_23)
                 .setDescription(R.string.material_description_23)
@@ -277,7 +299,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_3));
+                .setSound(R.raw.placeholder_3)
+                .setImage(R.drawable.placeholder_5, BirdCall.SCALE_TYPE_CENTER_INSIDE));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_24)
                 .setDescription(R.string.material_description_24)
@@ -287,7 +310,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_4));
+                .setSound(R.raw.placeholder_4)
+                .setImage(R.drawable.placeholder_6, BirdCall.SCALE_TYPE_CENTER_INSIDE));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_25)
                 .setDescription(R.string.material_description_25)
@@ -297,7 +321,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_5));
+                .setSound(R.raw.placeholder_5)
+                .setImage(R.drawable.placeholder_1, BirdCall.SCALE_TYPE_CENTER_CROP));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_26)
                 .setDescription(R.string.material_description_26)
@@ -307,7 +332,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_1));
+                .setSound(R.raw.placeholder_1)
+                .setImage(R.drawable.placeholder_2, BirdCall.SCALE_TYPE_CENTER_CROP));
         birdCallList.add(new BirdCall(this)
                 .setName(R.string.material_name_27)
                 .setDescription(R.string.material_description_27)
@@ -317,7 +343,8 @@ public class ViewCallsActivity extends AppCompatActivity {
                 .setMaterialCover(R.string.material_cover_1)
                 .setMaterialStriker(R.string.material_striker_1)
                 .setMaterialSoundboard(R.string.material_soundboard_1)
-                .setSound(R.raw.placeholder_2));
+                .setSound(R.raw.placeholder_2)
+                .setImage(R.drawable.placeholder_3, BirdCall.SCALE_TYPE_CENTER_CROP));
 
     }
 }
