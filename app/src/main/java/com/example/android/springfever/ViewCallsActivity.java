@@ -38,6 +38,14 @@ public class ViewCallsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        binding.viewCartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ViewCallsActivity.this, ShoppingActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

@@ -92,7 +92,7 @@
             tools:text="$5.00" />
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/viewSingle_playSound"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -103,6 +103,19 @@
             android:src="@drawable/baseline_play_circle_filled_black_48"
             app:layout_constraintBottom_toTopOf="@+id/guideline"
             app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageButton
+            android:id="@+id/viewSingle_shoppingCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/contDes_playSound"
+            android:onClick="@{() -> birdCall.onToggleCart()}"
+            android:src="@drawable/outline_add_shopping_cart_black_48"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/viewSingle_labelName"

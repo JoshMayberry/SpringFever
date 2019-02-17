@@ -7,6 +7,7 @@ import android.databinding.Bindable;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 /**
  * This class holds data pertaining to a bird call.
@@ -89,6 +90,10 @@ public class BirdCall extends BaseObservable {
 
     public void onPlaySound() {
         mMyMediaPlayer.playSound(mSoundId);
+    }
+
+    public void onToggleCart() {
+        Toast.makeText(mActivity, "Not Yet Implemented", Toast.LENGTH_SHORT).show();
     }
 
     //Getters

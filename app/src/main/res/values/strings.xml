@@ -105,5 +105,6 @@
     <string name="material_soundboard_2">Birch</string>
     <string name="material_soundboard_3">Mahogany</string>
     <string name="title_view_single_call">Details</string>
+    <string name="view_cart">View Cart</string>
 
 </resources>
