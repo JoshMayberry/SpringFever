@@ -46,23 +46,6 @@ public class BirdCall extends BaseObservable {
         extractParcelData();
     }
 
-    @Override
-    public String toString() {
-        return "BirdCall{" +
-                "mActivity=" + mActivity +
-                ", mMyMediaPlayer is not null=" + String.valueOf(mMyMediaPlayer != null) +
-                ", mName=" + mName +
-                ", mPrice=" + mPrice +
-                ", mProductId=" + mProductId +
-                ", mDescription=" + mDescription +
-                ", mSoundId=" + mSoundId +
-                ", mMaterialBase=" + mMaterialBase +
-                ", mMaterialCover=" + mMaterialCover +
-                ", mMaterialStriker=" + mMaterialStriker +
-                ", mMaterialSoundboard=" + mMaterialSoundboard +
-                '}';
-    }
-
     /**
      * This extracts the parcel values and places them into a more stable object
      * See: https://guides.codepath.com/android/using-parcelable#what-it-is-not
@@ -88,10 +71,17 @@ public class BirdCall extends BaseObservable {
         setMaterialSoundboard(parcel.materialSoundboard);
     }
 
+    /**
+     * Plays the sound associated with this bird call.
+     */
     public void onPlaySound() {
         mMyMediaPlayer.playSound(mSoundId);
     }
 
+    /**
+     * Adds this call to the shopping cart.
+     * If it is already in the cart, it is removed.
+     */
     public void onToggleCart() {
         Toast.makeText(mActivity, "Not Yet Implemented", Toast.LENGTH_SHORT).show();
     }
@@ -140,7 +130,7 @@ public class BirdCall extends BaseObservable {
                 return ImageView.ScaleType.CENTER_INSIDE;
             default:
                 Log.e("BirdCall", "Unknown scale type " + mImageScaleType);
-                return ImageView.ScaleType.CENTER_CROP;
+                return ImageView.ScaleType.CENTER_INSIDE;
         }
     }
 

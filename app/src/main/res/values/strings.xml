@@ -3,17 +3,31 @@
     <string name="error">N/A</string>
     <string name="company_name">Spring Fever Custom Calls</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="about_summary">We make custom turkey calls in North Vernon, Indiana.\n\nThe button below contain our contact information.</string>
 
     <!-- Activity Names -->
     <string name="title_gallery">Gallery</string>
     <string name="title_shopping">Shopping</string>
     <string name="title_about">About</string>
     <string name="title_view_calls">Catalogue</string>
+    <string name="title_view_single_call">Details</string>
+    <string name="title_view_shopping">View Cart</string>
 
     <!-- Content Descriptions -->
     <string name="contDes_playSound">Play Sound</string>
     <string name="contDesc_titleImage">Title Image</string>
     <string name="contDesc_productImage">Product Image</string>
+
+    <!-- Gallery Descriptions -->
+    <string name="gallery_description_1">This turkey was caught using one of our calls</string>
+    <string name="gallery_description_2">This is the mold that is used to create our calls</string>
+    <string name="gallery_description_3">Here are some of our calls for sale</string>
+    <string name="gallery_description_4">Here are some of the calls up close</string>
+    <string name="gallery_description_5">This turkey was also caught using one of our calls</string>
+    <string name="gallery_description_6">Here we are making some of the calls</string>
+    <string name="gallery_description_7">Here are some more calls being made</string>
+    <string name="gallery_description_8">These calls are hands free, using your mouth</string>
+    <string name="gallery_description_9">Another turkey caught using one of our calls</string>
 
     <!-- Bird Call Attributes -->
     <string name="label_name">Name</string>
@@ -104,7 +118,5 @@
     <string name="material_soundboard_1">Maple</string>
     <string name="material_soundboard_2">Birch</string>
     <string name="material_soundboard_3">Mahogany</string>
-    <string name="title_view_single_call">Details</string>
-    <string name="view_cart">View Cart</string>
 
 </resources>

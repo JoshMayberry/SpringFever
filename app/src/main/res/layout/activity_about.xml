@@ -13,7 +13,7 @@
         tools:context=".AboutActivity">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/about_backgroundImage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:adjustViewBounds="false"
@@ -25,8 +25,20 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/about" />
 
+        <TextView
+            android:id="@+id/about_description"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/padding_default"
+            style="@style/TextAppearance.AppCompat.Large.Inverse"
+            app:layout_constraintBottom_toTopOf="@+id/about_toolbarBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/about_summary" />
+
         <View
-            android:id="@+id/view"
+            android:id="@+id/about_toolbarBackground"
             android:layout_width="0dp"
             android:layout_height="116dp"
             android:background="@color/colorThemeOne"
@@ -44,12 +56,12 @@
             android:background="@android:color/transparent"
             android:scaleType="centerInside"
             android:tint="@color/colorThemeOneDark"
-            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintBottom_toBottomOf="@+id/about_toolbarBackground"
             app:layout_constraintEnd_toStartOf="@+id/about_location"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/about_toolbarBackground"
             app:srcCompat="@drawable/simple_facebook" />
 
         <ImageButton

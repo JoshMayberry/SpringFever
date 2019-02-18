@@ -33,7 +33,7 @@
             android:theme="@style/Theme.AppCompat.SpringFever.ThemeOne" />
         <activity
             android:name=".MainActivity"
-            android:label=""
+            android:label="@string/app_name"
             android:theme="@style/Theme.AppCompat.SpringFever.ThemeThree" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

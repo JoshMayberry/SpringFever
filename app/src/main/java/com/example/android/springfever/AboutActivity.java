@@ -38,7 +38,7 @@ public class AboutActivity extends AppCompatActivity {
     			//Use: https://developer.android.com/guide/components/intents-common?utm_source=udacity&utm_medium=course&utm_campaign=android_basics#Email
 				Intent intent = new Intent(Intent.ACTION_SEND);
 			    intent.setType("*/*");
-			    intent.putExtra(Intent.EXTRA_EMAIL, "joshua.mayberry1991@gmail.com");
+			    intent.putExtra(Intent.EXTRA_EMAIL, "springfevercustomcalls@gmail.com");
 			    intent.putExtra(Intent.EXTRA_SUBJECT, "Hi There!");
 			    intent.putExtra(Intent.EXTRA_TEXT, "Lorem ipsum dolor sit amet");
 			    if (intent.resolveActivity(getPackageManager()) != null) {
