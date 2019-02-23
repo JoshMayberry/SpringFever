@@ -14,22 +14,27 @@
         <activity
             android:name=".GaleryActivity"
             android:label="@string/title_gallery"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.AppCompat.SpringFever.ThemeTwo" />
         <activity
             android:name=".ShoppingActivity"
             android:label="@string/title_shopping"
+            android:parentActivityName=".ViewCallsActivity"
             android:theme="@style/Theme.AppCompat.SpringFever.ThemeOne" />
         <activity
             android:name=".AboutActivity"
             android:label="@string/title_about"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.AppCompat.SpringFever.ThemeThree" />
         <activity
             android:name=".ViewSingleCallActivity"
             android:label="@string/title_view_single_call"
+            android:parentActivityName=".ViewCallsActivity"
             android:theme="@style/Theme.AppCompat.SpringFever.ThemeOne" />
         <activity
             android:name=".ViewCallsActivity"
             android:label="@string/title_view_calls"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.AppCompat.SpringFever.ThemeOne" />
         <activity
             android:name=".MainActivity"
