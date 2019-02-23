@@ -9,5 +9,8 @@ public class ShoppingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopping);
+
+        //See: https://developer.android.com/training/implementing-navigation/ancestral#up
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

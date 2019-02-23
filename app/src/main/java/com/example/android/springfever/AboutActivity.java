@@ -17,6 +17,9 @@ public class AboutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //See: https://developer.android.com/training/implementing-navigation/ancestral#up
+        getActionBar().setDisplayHomeAsUpEnabled(true);
+
         //See: https://codelabs.developers.google.com/codelabs/android-databinding/index.html?index=..%2F..index#4
         binding = DataBindingUtil.setContentView(this, R.layout.activity_about);
 
